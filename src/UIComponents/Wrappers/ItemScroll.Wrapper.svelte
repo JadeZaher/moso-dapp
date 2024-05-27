@@ -11,9 +11,10 @@
 -->
 <div class="
     border 
-    border-red-50 
-    min-h-full
-    min-w-full
+    border-red 
+    min-h-screen
+    min-w-screen
+    m-4
     {snapPosition}">
     <slot/>
 </div>
