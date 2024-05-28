@@ -33,22 +33,22 @@
     <MainScroll snapDirection="Vertical">
         <ItemScroll snapPosition="snap-center">
             <div class="{StyleConstants.verticalFullScreenScrollItem}">
-                <h1 class="text-3xl font-bold underline">MoSo dapp</h1>
+                <h1 class="{StyleConstants.h1BaseStyle}">MoSo dapp</h1>
                 {#if $UserName}
-                <div> hello {$UserName}</div>
-                <button on:click={signOut}>Sign Out</button>
-            {:else}
-            <div> Login/Sign Up </div>
-                <input bind:value={userName} minlength="3" maxlength="16" class=" border-solid border-2 border-black">
-                <input bind:value={pass} minlength="3" maxlength="16" class=" border-solid border-2 border-black">
-                <button on:click={logIn}>Log In</button>
-                <button on:click={signUp}>Sign Up</button>
-            {/if}
+                    <div> hello {$UserName}</div>
+                    <button on:click={signOut}>Sign Out</button>
+                {:else}
+                    <h1 class="{StyleConstants.h1BaseStyle}"> Login/Sign Up </h1>
+                    <input bind:value={userName} minlength="3" maxlength="16" class="{StyleConstants.inputStyleBase}">
+                    <input bind:value={pass} minlength="3" maxlength="16" class="{StyleConstants.inputStyleBase}">
+                    <button on:click={logIn}>Log In</button>
+                    <button on:click={signUp}>Sign Up</button>
+                {/if}
             </div>
         </ItemScroll>
         <ItemScroll snapPosition="snap-center">
             <div class="{StyleConstants.verticalFullScreenScrollItem}">
-                <h1 class="text-3xl font-bold underline">Starting the MOSO decentralized application</h1>
+                <h1 class="{StyleConstants.h1BaseStyle}">Starting the MOSO decentralized application</h1>
             </div>
         </ItemScroll>
     </MainScroll>
