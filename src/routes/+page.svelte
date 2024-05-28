@@ -1,13 +1,9 @@
 <script lang="ts">
 	import { StyleConstants } from "$lib/Constants/StyleConstants";
-	import { UrlHelpers } from "$lib/Helpers/UrlHelpers";
     import { UserName, User } from "$lib/Gun/GunUser";
 	import ItemScroll from "../UIComponents/Wrappers/ItemScroll.Wrapper.svelte";
 	import MainScroll from "../UIComponents/Wrappers/MainScroll.Wrapper.svelte";
 
-    let max = 0;
-	let min = 0;
-	let total = 0;
 	let userName:string;
 	let pass:string;
 
@@ -32,7 +28,6 @@
                 }
             }));
     }
-
 </script>
 
     <MainScroll snapDirection="Vertical">
