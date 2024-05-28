@@ -33,17 +33,6 @@
             }));
     }
 
-	async function add() {
-		const response = await fetch('/api/dap?' + UrlHelpers.EncodeGetParams({max,min}), {
-			method: 'GET',
-			headers: {
-				'content-type': 'application/json'
-			}
-		});
-
-		total = await response.json();
-	}
-
 </script>
 
     <MainScroll snapDirection="Vertical">
