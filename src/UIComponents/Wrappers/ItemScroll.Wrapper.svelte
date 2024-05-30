@@ -10,11 +10,12 @@
     component to take up the whole space. 
 -->
 <div class="
-    border 
-    border-red 
     min-h-screen
     min-w-screen
     m-4
+    flex
+    justify-center
+    items-center
     {snapPosition}">
     <slot/>
 </div>

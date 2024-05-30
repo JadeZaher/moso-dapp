@@ -30,25 +30,29 @@
     }
 </script>
 
-    <MainScroll snapDirection="Vertical">
-        <ItemScroll snapPosition="snap-center">
-            <div class="{StyleConstants.verticalFullScreenScrollItem}">
-                <h1 class="{StyleConstants.h1BaseStyle}">MoSo dapp</h1>
+<div class="absolute w-screen h-screen bg-[#0681E8] z-[-1]"/>
+
+<MainScroll snapDirection="Vertical">
+    <ItemScroll snapPosition="snap-center">
+        <div class="{StyleConstants.vertical80ScrollItem} bg-white">
+            <div class=" filter-none">    
+                <h1 class="{StyleConstants.h1TitleStyle} font-black">MoSo dapp</h1>
                 {#if $UserName}
-                    <div> hello {$UserName}</div>
-                    <button on:click={signOut}>Sign Out</button>
+                <div> hello {$UserName}</div>
+                <button on:click={signOut}>Sign Out</button>
                 {:else}
-                    <h1 class="{StyleConstants.h1BaseStyle}"> Login/Sign Up </h1>
-                    <input bind:value={userName} minlength="3" maxlength="16" class="{StyleConstants.inputStyleBase}">
-                    <input bind:value={pass} minlength="3" maxlength="16" class="{StyleConstants.inputStyleBase}">
-                    <button on:click={logIn}>Log In</button>
-                    <button on:click={signUp}>Sign Up</button>
+                <h1 class="{StyleConstants.h1BaseStyle} "> Login/Sign Up </h1>
+                <input placeholder="username" bind:value={userName} minlength="3" maxlength="16" class="{StyleConstants.inputBaseStyle}">
+                <input placeholder="password" bind:value={pass} minlength="3" maxlength="16" class="{StyleConstants.inputBaseStyle}">
+                <button class="{StyleConstants.baseButtonStyle}" on:click={logIn}>Log In</button>
+                <button class="{StyleConstants.baseButtonStyle}" on:click={signUp}>Sign Up</button>
                 {/if}
             </div>
-        </ItemScroll>
-        <ItemScroll snapPosition="snap-center">
-            <div class="{StyleConstants.verticalFullScreenScrollItem}">
-                <h1 class="{StyleConstants.h1BaseStyle}">Starting the MOSO decentralized application</h1>
-            </div>
-        </ItemScroll>
-    </MainScroll>
+        </div>
+    </ItemScroll>
+    <ItemScroll snapPosition="snap-center">
+        <div class="{StyleConstants.verticalFullScreenScrollItem}">
+            <h1 class="{StyleConstants.h1BaseStyle}">Starting the MOSO decentralized application</h1>
+        </div>
+    </ItemScroll>
+</MainScroll>

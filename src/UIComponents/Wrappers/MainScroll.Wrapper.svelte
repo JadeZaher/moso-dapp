@@ -8,8 +8,7 @@
         "snap-x overflow-y-hidden";
 
     // color
-    export let bgStyle = "bg-slate-400" 
-    export let borderStyle = "border-2 border-black rounded-md" 
+    export let bgStyle = "" 
 
 </script>
 <!-- 
@@ -23,7 +22,7 @@
         no-scrollbar
         {directionStlye}
         {bgStyle}
-        {borderStyle}"
+        "
     >    
     <slot/>
 </div>
